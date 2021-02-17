@@ -16,7 +16,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
+# MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_rest_app',
+    # 'rest_framework.authtoken',
     'rest_framework',
 ]
 
@@ -58,7 +60,7 @@ ROOT_URLCONF = 'rest_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,13 +123,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 
-STATICFILES_DIRS = (
-   os.path.join(BASE_DIR, 'static'),
-)
-MEDIA_URL = '/media/'
+# STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+# )
+# MEDIA_URL = '/media/'
 
-MEDIA_ROOT = MEDIA_DIR
+# MEDIA_ROOT = MEDIA_DIR
